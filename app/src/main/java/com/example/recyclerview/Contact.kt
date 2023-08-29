@@ -1,4 +1,3 @@
 package com.example.recyclerview
 
-class Contact {
-}
+data class Contact(val Img:Int, val Name:String, val Call:String, val Bookmark:Boolean)
