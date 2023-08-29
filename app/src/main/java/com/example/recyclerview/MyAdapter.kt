@@ -31,11 +31,24 @@ class MyAdapter(private val item: List<Contact>) :
 
         val contact = item[position]
         when (holder) {
-            is Contact0ViewHolder -> holder.bind(contact)
-            is Contact1ViewHolder -> holder.bind(contact)
+            is Contact0ViewHolder -> {
+                holder.bind(contact)
+                holder.itemView.setOnClickListener {
+                    // 아이템 클릭 이벤트 처리
+                    contact.Bookmark = !contact.Bookmark
+                    notifyItemChanged(position)
+                }
+            }
+            is Contact1ViewHolder -> {
+                holder.bind(contact)
+                holder.itemView.setOnClickListener {
+                    // 아이템 클릭 이벤트 처리
+                    contact.Bookmark = !contact.Bookmark
+                    notifyItemChanged(position)
+                }
+            }
         }
     }
-
 
     override fun getItemCount(): Int {
         return item.size
