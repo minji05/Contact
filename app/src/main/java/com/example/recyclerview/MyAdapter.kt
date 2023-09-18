@@ -64,7 +64,7 @@ class MyAdapter(private val item: List<Contact>) :
             binding.contactImg.setImageResource(contact.Img)
             binding.contactName.text = contact.Name
             binding.contactCall.text = contact.Call
-            binding.contactMark.setImageResource(R.drawable.nomark)
+            binding.contactMark.setImageResource(R.drawable.mark)
 
         }
     }
@@ -76,7 +76,7 @@ class MyAdapter(private val item: List<Contact>) :
             binding.contactImg.setImageResource(contact.Img)
             binding.contactName.text = contact.Name
             binding.contactCall.text = contact.Call
-            binding.contactMark.setImageResource(R.drawable.mark)
+            binding.contactMark.setImageResource(R.drawable.nomark)
         }
     }
 
